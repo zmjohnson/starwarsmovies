@@ -1,3 +1,3 @@
-module Starwarsmovies
+module SWM
   VERSION = "0.1.0"
 end

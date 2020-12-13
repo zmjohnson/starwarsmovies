@@ -1,4 +1,4 @@
-class SWM::Movies
+class Starwarsmovies::Movies
     attr_accessor :name, :ref
     @@all = []
   

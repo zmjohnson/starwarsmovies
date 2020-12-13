@@ -1,13 +1,13 @@
-class SWM::Scraper
+class Starwarsmovies::Scraper
 
     def self.scrape_movies
-      url = "---"
+      url = "https://starwarscanontimeline.com/movie/"
       doc = Nokogiri::HTML(open(url))
-      movies = doc.css("#custom_html-8 li")
+      movies = doc.css("#entry-header header")
       movies.each do |d|
           ref = d.css("a").attr("href").text.strip
-          name = d.css("span.list-name").text.strip
-          SWM::Planets.new(name, ref)
+          name = d.css("h3.entry-title").text.strip
+          Starwarsmovies::Movies.new(name, ref)
       end
     end
   end

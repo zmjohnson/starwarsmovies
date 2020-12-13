@@ -1,4 +1,4 @@
-class SWM::CLI
+class Starwarsmovies::CLI
 
     def call
       list_movies
@@ -9,7 +9,7 @@ class SWM::CLI
     
     def list_movies
       puts "Welcome to my Star Wars CLI! In this CLI we'll learn a bit about the movies set in the Star Wars Universe. Here are the movies listed in chronological order:"
-      @planets = SWM::Planets.all
+      @planets = Starwarsmovies::Movies.all
       @planets.each.with_index(1) do |movie, index|
           puts "#{index}. #{movie.name}"
     end
@@ -19,7 +19,7 @@ class SWM::CLI
       show_movie_details
     end
     
-      def show_planet_details
+      def show_movies_details
         input = gets.strip.to_i
         if input == 1
           url = "----"
