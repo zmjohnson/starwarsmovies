@@ -1,5 +1,7 @@
 require "starwarsmovies/version"
-
+require "starwarsmovies/cli"
+require "starwarsmovies/vader"
+require "starwarsmovies/scraper"
 
 require 'nokogiri'
 require 'open-uri' 
