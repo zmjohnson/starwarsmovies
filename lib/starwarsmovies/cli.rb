@@ -22,9 +22,9 @@ class Starwarsmovies::CLI
       def show_movies_details
         input = gets.strip.to_i
         if input == 1
-          url = "----"
+          url = "https://starwarscanontimeline.com/movie/episode-1/"
           doc = Nokogiri::HTML(open(url))
-              li = doc.css("div.hero h2").text.strip
+              li = doc.css("p").text.strip
                 puts "_________The Phantom Menace_______________________"
                 puts ""
                 puts "#{li}"
